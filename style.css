@@ -598,6 +598,20 @@ p {
     display: none;
   }
 
+  .skills-container {
+    /* Add left and right padding to create margins */
+    padding: 0 2rem;
+    /* Adjust grid-template-columns to a single column */
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .home-img {
+    /* Center the image horizontally */
+    margin: 0 auto;
+    /* Adjust width for better responsiveness */
+    width: 80%;
+  }
+
   .navbar.active {
     display: block;
   }
@@ -638,6 +652,13 @@ p {
 
   .about{
     flex-direction: column-reverse;
+  }
+  
+  .about .btn {
+    /* Center the button horizontally */
+    margin: 0 auto;
+    /* Adjust width for better responsiveness */
+    width: 80%;
   }
 
   .about-content{
