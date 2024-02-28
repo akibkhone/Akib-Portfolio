@@ -653,12 +653,14 @@ p {
   .about{
     flex-direction: column-reverse;
   }
-  
+
   .about .btn {
-    /* Center the button horizontally */
+    margin-top: 3rem;
+    display: block;
     margin: 0 auto;
-    /* Adjust width for better responsiveness */
-    width: 80%;
+    width: 60%;
+    text-align: center;
+    justify-content: center;
   }
 
   .about-content{
@@ -679,3 +681,27 @@ p {
   }
 }
 
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+  /* Add a max-width to prevent the container from becoming too wide on large screens */
+  max-width: 1200px;
+  /* Center the container horizontally */
+  margin: 0 auto;
+}
+
+/* Add a media query to adjust the grid layout on smaller screens */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Add another media query to adjust the layout on even smaller screens */
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
