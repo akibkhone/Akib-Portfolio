@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akib Khan</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#home" class="logo"> Akib <span>Khan</span></a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <!-- <a href="#experience">Experience</a> -->
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-img">
+        <img src="me.jpg" alt="" />
+      </div>
+      <div class="home-content">
+        <h1>It's <span>Akib</span></h1>
+        <h3 class="text-animation">I'm a <span></span></h3>
+
+        <p style="margin-top: 2rem">
+          Full Stack Java Developer with a passion for building scalable
+          solutions. From crafting Microservices to optimizing databases, I love
+          turning code into real-world impact. Let’s connect and explore
+          exciting opportunities together!
+        </p>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/akibkhone" target="_blank">
+            <button class="Btn linkedin">
+              <span class="svgContainer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="white"
+                  height="1.6em"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                  />
+                </svg>
+              </span>
+              <span class="BG"></span>
+            </button>
+          </a>
+
+          <a href="https://github.com/akibkhone" target="_blank">
+            <button class="Btn github">
+              <span class="svgContainer">
+                <svg fill="white" viewBox="0 0 496 512" height="1.6em">
+                  <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                  />
+                </svg>
+              </span>
+              <span class="BG"></span>
+            </button>
+          </a>
+        </div>
+        <a href="mailto:akib.backend@gmail.com" class="btn">Hire Me</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3 class="text-animation">
+          <span></span>
+        </h3>
+        <p>
+          I’m Akib Khan, a Backend Developer based in Mumbai, MH. I specialize
+          in Spring Boot and have nearly two years of experience. I’m proficient
+          in microservices architecture, RESTful APIs, and database
+          administration using JPA and Hibernate. I’m committed to continuous
+          learning and eager to leverage my expertise in advancing cutting-edge
+          projects. I’m a collaborative team player with strong communication
+          skills. Feel free to connect with me on LinkedIn.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1KrbpXHNWiWfgc3IAPzarkVg0VbKvbfQT/view?usp=drivesdk"
+          class="btn"
+          target="_blank"
+          >Resume</a
+        >
+      </div>
+      <div class="about-img">
+        <img src="me.jpg" alt="" />
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2 class="heading">Skills <span>Set</span></h2>
+
+      <div class="skills-container">
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Programming Languages</h4>
+            <p>Java, HTML, CSS, Python</p>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Frameworks/Technologies</h4>
+            <p>
+              Spring Boot, Microservices, Maven, Junit, Mockito, JPA, Hibernate,
+              MySQL, ReactJS, MongoDB, Cloud, Docker
+            </p>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Tools</h4>
+            <p>
+              Git, Spring Tool Suite, Camunda, RabbitMQ, Elastic Search,
+              Postman, Bash, GitHub
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact <span>Me</span></h2>
+
+      <form action="https://formspree.io/f/xeqykrna" method="POST">
+        <div class="input-box">
+          <input type="text" name="fullName" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+
+        <div class="input-box">
+          <input type="tel" name="phoneNumber" placeholder="Phone Number" />
+          <input type="text" name="subject" placeholder="Subject" />
+        </div>
+
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+        ></textarea>
+        <input type="submit" value="Send Message" class="btn" />
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/akibkhone" target="_blank">
+          <button class="Btn linkedin">
+            <span class="svgContainer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                height="1.6em"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                />
+              </svg>
+            </span>
+            <span class="BG"></span>
+          </button>
+        </a>
+
+        <a href="https://github.com/akibkhone" target="_blank">
+          <button class="Btn github">
+            <span class="svgContainer">
+              <svg fill="white" viewBox="0 0 496 512" height="1.6em">
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </span>
+            <span class="BG"></span>
+          </button>
+        </a>
+      </div>
+
+      <p class="copyright">&copy; Akib Khan | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
