@@ -6,16 +6,16 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Montserrat";
+  font-family: "Open Sans", sans-serif;
 }
+
 :root {
-  --bg-color: #111111;
-  --second--bg-color: #151515;
+  --second--bg-color: #111111;
+  --bg-color: #454141;
   --text-color: white;
   --glow-color: rgb(217, 176, 255);
   --glow-spread-color: rgba(191, 123, 255, 0.781);
   --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(100, 61, 136);
 }
 
 html {
@@ -80,6 +80,17 @@ section {
   padding: 10rem 9% 10rem;
 }
 
+.heading {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+}
+
+.heading span {
+  color: var(--glow-color);
+  text-shadow: 0 0 50px var(--glow-color);
+}
 .home {
   display: flex;
   justify-content: center;
@@ -96,6 +107,11 @@ section {
   flex-direction: column;
   text-align: center;
   margin-top: 3rem;
+}
+
+.home-content p {
+  font-size: 2rem;
+  margin-bottom: 5rem;
 }
 
 span {
@@ -161,10 +177,9 @@ span {
   border-radius: 7px;
   cursor: pointer;
   transition: all 0.3s;
-  margin-right: 3rem; /* Add margin between buttons */
+  margin-right: 3rem;
 }
 
-/* Adjust margin for the last button to avoid extra space */
 .github:last-child {
   margin-right: 0;
 }
@@ -274,9 +289,7 @@ span {
 .text-animation span {
   position: relative;
 }
-p {
-  margin-top: 5rem;
-}
+
 .text-animation span::before {
   content: "Web Developer";
   color: var(--glow-color);
@@ -285,11 +298,11 @@ p {
 
 .text-animation span::after {
   content: "";
-  background-color: var(--bg-color);
   position: absolute;
   width: calc(100% + 8px);
-  height: 100%;
   border-left: 3px solid var(--bg-color);
+  background-color: var(--second--bg-color);
+  height: 100%;
   right: -8px;
   animation: curson 0.5s infinite, typing 20s steps(14) infinite;
 }
@@ -302,24 +315,20 @@ p {
 
 @keyframes words {
   0%,
-  20% {
+  25% {
     content: "Web Developer";
   }
-  21%,
-  40% {
+  26%,
+  50% {
     content: "Java Spring Boot Developer";
   }
-  41%,
-  60% {
+  51%,
+  75% {
     content: "Microservices Specialist";
   }
-  61%,
-  80% {
-    content: "React Developer";
-  }
-  81%,
+  76%,
   100% {
-    content: "Full Stack Java Developer";
+    content: "Backend Java Developer";
   }
 }
 
@@ -373,47 +382,13 @@ p {
     0 0 100px var(--enhanced-glow-color);
 }
 
-.about-content .heading {
-  text-align: center;
-  line-height: 1.5;
-  font-size: 5rem;
-}
-
-.about-content h2 {
-  text-align: left;
-  line-height: 1.5;
-  margin-bottom: 5rem;
-}
-
-.about h2 span {
-  color: var(--glow-color);
-  text-shadow: 0 0 50px var(--glow-color);
-}
-
 .about-content h3 {
   font-size: 2.6rem;
 }
 
-.about-content p {
-  font-size: 1.6rem;
+.about p {
+  font-size: 2rem;
   margin-bottom: 5rem;
-}
-
-.about-content .text-animation span::before {
-  content: "Web Developer";
-  color: var(--glow-color);
-  animation: words 20s infinite;
-}
-
-.about-content .text-animation span::after {
-  content: "";
-  background-color: var(--second--bg-color-color);
-  position: absolute;
-  width: calc(100% + 8px);
-  height: 100%;
-  border-left: 3px solid var(--second--bg-color-color);
-  right: -8px;
-  animation: curson 0.6s infinite, typing 20s steps(14) infinite;
 }
 
 ::-webkit-scrollbar {
@@ -440,9 +415,12 @@ p {
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 2.5rem;
+}
+
+.skills-container {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .skill-box {
@@ -452,6 +430,7 @@ p {
   border-radius: 3rem;
   transition: 0.3s ease-in-out;
 }
+
 .skill-box:hover {
   background: white;
   color: var(--glow-spread-color);
@@ -473,37 +452,14 @@ p {
   font-weight: 500;
   text-align: center;
   margin-bottom: 1rem;
-  margin-top: 0; /* Add this line */
+  margin-top: 0;
 }
 
 .skill-info p {
   font-size: 2rem;
   font-weight: 400;
   text-align: center;
-  margin-top: 15px; /* Add this line */
-}
-
-.skills h2 {
-  text-align: center;
-  line-height: 1.5;
-  font-size: 5em;
-  margin-bottom: 4rem;
-}
-.skills h2 span {
-  color: var(--glow-color);
-  text-shadow: 0 0 50px var(--glow-color);
-}
-.contact h2 {
-  text-align: center;
-  line-height: 1.5;
-  font-size: 5em;
-  margin-bottom: 4rem;
-  color: white;
-}
-
-.contact h2 span {
-  color: var(--glow-color);
-  text-shadow: 0 0 50px var(--glow-color);
+  margin-top: 15px;
 }
 
 .contact {
@@ -554,14 +510,109 @@ p {
   color: white;
 }
 
+.home,
+.skills,
+.projects {
+  background-color: var(--second--bg-color);
+  color: white;
+}
+
+.about,
+.experience,
+.contact {
+  background-color: var(--bg-color);
+  color: white;
+}
+
+.experience,
+.projects {
+  padding-bottom: 7rem;
+}
+
+.common-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: 0.3s ease-in-out;
+}
+
+.common-container .common-card:hover {
+  transform: scale(1.03);
+  background: white;
+  color: var(--glow-spread-color);
+  transition: 0.3s ease-in-out;
+}
+
+.common-container .common-card h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.common-container .common-card ul {
+  font-size: 2rem;
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+.experience {
+  padding: 10rem 3%;
+}
+
+.projects {
+  padding: 10rem 3%;
+}
+
+.common-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin: 0 auto;
+  max-width: 0px;
+}
+
+.experience .common-container {
+  max-width: none;
+  margin: 0 3%;
+}
+
+.projects .common-container {
+  max-width: 100%;
+}
+
+.common-card {
+  background-color: var(--glow-color);
+  color: black;
+  border-radius: 1rem;
+  padding: 3rem;
+  text-align: left;
+  background-color: var(--glow-color);
+}
+
+.project-links {
+  margin-top: 2rem;
+}
+
+.project-links a {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.project-links a:last-child {
+  margin-right: 0;
+}
+
 @media (max-width: 1285px) {
   html {
     font-size: 55%;
   }
-  .skills-container {
-    padding-bottom: 7rem;
+  .skills-container,
+  .common-container {
+    padding-bottom: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 5rem;
+    margin: 0 5%;
   }
 }
 
@@ -598,23 +649,22 @@ p {
     display: none;
   }
 
-  .skills-container {
-    /* Add left and right padding to create margins */
-    padding: 0 2rem;
-    /* Adjust grid-template-columns to a single column */
+  .skills-container,
+  .common-container {
+    padding: 0 2%;
     grid-template-columns: repeat(1, 1fr);
   }
 
   .home-img {
-    /* Center the image horizontally */
     margin: 0 auto;
-    /* Adjust width for better responsiveness */
     width: 80%;
+    max-width: 400px;
   }
 
   .navbar.active {
     display: block;
   }
+
   .navbar a {
     display: block;
     font-size: 2rem;
@@ -624,7 +674,7 @@ p {
 
   .home {
     flex-direction: column;
-    margin: 5rem 4rem;
+    margin: 5rem 2%;
   }
 
   .home-content h3 {
@@ -632,25 +682,26 @@ p {
   }
 
   .home-content h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-top: 2rem;
   }
 
   .home-content p {
     min-width: 60px;
     margin: auto;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-  .home-img{
-    width: 52vw;
+  .home-img {
+    width: 80%;
+    max-width: 300px;
     margin-top: -2rem;
   }
   .home-img img {
-    width: 90%; /* Adjust the percentage value as needed */
+    width: 100%;
     margin-top: -2rem;
   }
 
-  .about{
+  .about {
     flex-direction: column-reverse;
   }
 
@@ -663,45 +714,115 @@ p {
     justify-content: center;
   }
 
-  .about-content{
-    margin: 0 2rem 4rem;
+  .about-content {
+    margin: 0 2% 4rem;
   }
 
-  .about img{
-    width: 52vw;
-    margin-top: 1rem;
+  .about-img img {
+    width: 100%;
+  }
+  .about-img {
+    margin-top: -3rem;
   }
 
-  .skills{
-    margin-bottom: 3rem;
+  .common-container {
+    gap: 3rem;
+    padding-bottom: 3rem;
+  }
+  .common-card {
+    max-width: 100%;
   }
 
-  .skills-container{
-    grid-template-columns: repeat(1,1fr);
+  .common-card h3 {
+    font-size: 2.2rem;
   }
-}
 
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 2.5rem;
-  /* Add a max-width to prevent the container from becoming too wide on large screens */
-  max-width: 1200px;
-  /* Center the container horizontally */
-  margin: 0 auto;
-}
-
-/* Add a media query to adjust the grid layout on smaller screens */
-@media (max-width: 768px) {
   .skills-container {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding-bottom: 5rem;
+  }
+
+  .skills-container .skill-box {
+    height: 200px;
+    padding: 2rem;
+  }
+
+  .contact form {
+    max-width: 90%;
+  }
+  .contact form .input-box input,
+  .contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--glow-color);
+    margin: 1rem 0;
+    resize: none;
+  }
+  .contact form .btn {
+    margin-top: 3rem;
+    width: 60%;
+    margin: 0 auto;
   }
 }
 
-/* Add another media query to adjust the layout on even smaller screens */
-@media (max-width: 480px) {
-  .skills-container {
-    grid-template-columns: 1fr;
+@media (max-width: 450px) {
+  .home {
+    margin: 2rem 2%;
+  }
+  .home-content h1 {
+    font-size: 3.5rem;
+  }
+  .home-content p {
+    min-width: 100px;
+    margin: auto;
+  }
+  .home-img img {
+    width: 70%;
+    margin-left: 5.5rem;
+  }
+  .about-content {
+    margin: 0 1rem 3rem;
+  }
+  .about-img img {
+    margin-left: 5.5rem;
+    width: 70%;
+  }
+  .skills-container,
+  .common-container {
+    padding: 0 1%;
+    margin-bottom: 0;
+  }
+
+  .experience {
+    margin-bottom: 0;
+  }
+
+  .skill-box .skill-info,
+  .common-card {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .skill-info {
+    padding: 0;
+    margin-top: auto 0;
+    height: auto;
+    font-size: 1.5rem;
+  }
+
+  .skill-info p  {
+    font-size: 1.4rem;
+  }
+
+  .contact form .btn {
+    margin-top: 20px;
+  }
+
+  .text-animation {
+    margin-bottom: 5rem;
   }
 }
