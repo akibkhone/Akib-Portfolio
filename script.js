@@ -23,3 +23,28 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active')
 }
+
+
+function showLoader() {
+    document.querySelector('.loader').classList.remove('hidden');
+  }
+  
+  // Function to hide loader
+  function hideLoader() {
+    document.querySelector('.loader').classList.add('hidden');
+  }
+  
+  // Simulate loading process
+  function simulateLoading() {
+    // Show loader
+    showLoader();
+  
+    // Simulate some loading time (e.g., 3 seconds)
+    setTimeout(function() {
+      // Hide loader after loading is complete
+      hideLoader();
+    }, 3000); // 3000 milliseconds = 3 seconds
+  }
+  
+  // Call the function to start simulating loading
+  simulateLoading();

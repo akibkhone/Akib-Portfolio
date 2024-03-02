@@ -125,7 +125,7 @@ span {
 .home-content h3 {
   margin-bottom: 2rem;
   margin-top: 1rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .home-content h1 {
@@ -293,24 +293,7 @@ span {
 .text-animation span::before {
   content: "Web Developer";
   color: var(--glow-color);
-  animation: words 20s infinite;
-}
-
-.text-animation span::after {
-  content: "";
-  position: absolute;
-  width: calc(100% + 8px);
-  border-left: 3px solid var(--bg-color);
-  background-color: var(--second--bg-color);
-  height: 100%;
-  right: -8px;
-  animation: curson 0.5s infinite, typing 20s steps(14) infinite;
-}
-
-@keyframes cursor {
-  to {
-    border-left: 2px solid var(--glow-color);
-  }
+  animation: words 5s infinite;
 }
 
 @keyframes words {
@@ -329,32 +312,6 @@ span {
   76%,
   100% {
     content: "Backend Java Developer";
-  }
-}
-
-@keyframes typing {
-  10%,
-  15%,
-  30%,
-  35%,
-  50%,
-  55%,
-  70%,
-  75%,
-  90%,
-  95% {
-    width: 0;
-  }
-  5%,
-  20%,
-  25%,
-  40%,
-  45%,
-  60%,
-  65%,
-  80%,
-  85% {
-    width: calc(100% + 80px);
   }
 }
 
@@ -437,7 +394,7 @@ span {
   transform: scale(1.03);
 }
 
-.skill-info {
+.skill-card {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -447,15 +404,15 @@ span {
   padding: 5em;
 }
 
-.skill-info h4 {
+.skill-card h4 {
   font-size: 2.5rem;
   font-weight: 500;
   text-align: center;
   margin-bottom: 1rem;
-  margin-top: 0;
+  margin-top: 2rem;
 }
 
-.skill-info p {
+.skill-card p {
   font-size: 2rem;
   font-weight: 400;
   text-align: center;
@@ -496,6 +453,15 @@ span {
   margin-top: 3rem;
 }
 
+.contact form .input-box input:focus,
+  .contact form textarea:focus {
+
+    box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+
+  }
+
 .footer {
   position: relative;
   bottom: 0;
@@ -512,7 +478,8 @@ span {
 
 .home,
 .skills,
-.projects {
+.projects,
+.footer {
   background-color: var(--second--bg-color);
   color: white;
 }
@@ -536,14 +503,16 @@ span {
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.common-card{
   transition: 0.3s ease-in-out;
 }
 
 .common-container .common-card:hover {
-  transform: scale(1.03);
   background: white;
   color: var(--glow-spread-color);
-  transition: 0.3s ease-in-out;
+  transform: scale(1.03);
 }
 
 .common-container .common-card h3 {
@@ -689,7 +658,7 @@ span {
   .home-content p {
     min-width: 60px;
     margin: auto;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .home-img {
     width: 80%;
@@ -709,7 +678,7 @@ span {
     margin-top: 3rem;
     display: block;
     margin: 0 auto;
-    width: 60%;
+    width: 50%;
     text-align: center;
     justify-content: center;
   }
@@ -734,7 +703,7 @@ span {
   }
 
   .common-card h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .skills-container {
@@ -771,7 +740,7 @@ span {
 
 @media (max-width: 450px) {
   .home {
-    margin: 2rem 2%;
+    margin: 2rem 0%;
   }
   .home-content h1 {
     font-size: 3.5rem;
@@ -801,21 +770,30 @@ span {
     margin-bottom: 0;
   }
 
-  .skill-box .skill-info,
+  .skill-box .skill-card,
   .common-card {
     height: auto;
     margin-bottom: 0;
   }
 
-  .skill-info {
+  .skill-card {
     padding: 0;
     margin-top: auto 0;
     height: auto;
     font-size: 1.5rem;
   }
 
-  .skill-info p  {
-    font-size: 1.4rem;
+  .home-content p,
+  .common-card  li,
+  .project-links a,
+  .about-content p,
+  .skill-card p  {
+    font-size: 1.5rem;
+  }
+
+  .common-container .common-card h3,
+  .skill-card h4  {
+    font-size: 2rem;
   }
 
   .contact form .btn {
@@ -826,3 +804,4 @@ span {
     margin-bottom: 5rem;
   }
 }
+
