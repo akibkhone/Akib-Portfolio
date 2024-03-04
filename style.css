@@ -76,7 +76,7 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  min-height: auto;
   padding: 10rem 9% 10rem;
 }
 
@@ -85,6 +85,7 @@ section {
   line-height: 1.5;
   font-size: 5rem;
   margin-bottom: 3rem;
+  margin-top: -7rem;
 }
 
 .heading span {
@@ -162,6 +163,9 @@ span {
   flex-direction: row;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  width: 100%;
+  height: auto;
+  background: transparent;
 }
 
 .linkedin,
@@ -383,7 +387,7 @@ span {
 .skill-box {
   background-color: var(--glow-color);
   color: black;
-  height: 250px;
+  height: 300px;
   border-radius: 3rem;
   transition: 0.3s ease-in-out;
 }
@@ -398,25 +402,32 @@ span {
   display: flex;
   flex-direction: column;
   text-align: left;
-  max-height: 200px;
+  max-height: 280px;
   justify-content: center;
   align-content: baseline;
   padding: 5em;
+  overflow: hidden;
 }
 
 .skill-card h4 {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 1rem;
   margin-top: 2rem;
+  font-weight: 700;
 }
 
-.skill-card p {
-  font-size: 2rem;
-  font-weight: 400;
-  text-align: center;
-  margin-top: 15px;
+.skill-icons {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+.skill-icons img {
+  max-height: 45px;
+  width: auto;
+  padding: 5px 5px;
+  image-rendering: optimizeQuality;
 }
 
 .contact {
@@ -454,13 +465,11 @@ span {
 }
 
 .contact form .input-box input:focus,
-  .contact form textarea:focus {
-
-    box-shadow: 0 0 1em 0.25em var(--glow-color),
+.contact form textarea:focus {
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
     0 0 4em 1em var(--glow-spread-color),
     inset 0 0 0.75em 0.25em var(--glow-color);
-
-  }
+}
 
 .footer {
   position: relative;
@@ -493,7 +502,8 @@ span {
 
 .experience,
 .projects {
-  padding-bottom: 7rem;
+  padding-bottom: -20rem;
+  margin-bottom: 0;
 }
 
 .common-container {
@@ -505,7 +515,7 @@ span {
   margin: 0 auto;
 }
 
-.common-card{
+.common-card {
   transition: 0.3s ease-in-out;
 }
 
@@ -515,13 +525,19 @@ span {
   transform: scale(1.03);
 }
 
-.common-container .common-card h3 {
-  font-size: 3rem;
+.common-container .common-card h4 {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  text-align: center;
+  padding: 5px;
+}
+
+.common-card p {
+  font-size: 1.5rem;
 }
 
 .common-container .common-card ul {
-  font-size: 2rem;
+  font-size: 1.5rem;
   list-style-type: disc;
   padding-left: 1rem;
 }
@@ -554,23 +570,17 @@ span {
 .common-card {
   background-color: var(--glow-color);
   color: black;
-  border-radius: 1rem;
+  border-radius: 3rem;
   padding: 3rem;
   text-align: left;
   background-color: var(--glow-color);
+  overflow: hidden;
 }
 
-.project-links {
-  margin-top: 2rem;
-}
-
-.project-links a {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.project-links a:last-child {
-  margin-right: 0;
+.project-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 @media (max-width: 1285px) {
@@ -643,7 +653,10 @@ span {
 
   .home {
     flex-direction: column;
-    margin: 5rem 2%;
+    margin: 7em 0%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 10rem;
   }
 
   .home-content h3 {
@@ -702,18 +715,50 @@ span {
     max-width: 100%;
   }
 
-  .common-card h3 {
+  .common-card h4 {
     font-size: 2rem;
   }
 
   .skills-container {
     gap: 3rem;
     padding-bottom: 5rem;
+    padding-right: 3rem;
+    align-items: center;
+    /* justify-self: center; */
   }
 
-  .skills-container .skill-box {
-    height: 200px;
+  .skills-container {
+    width: 90%;
+    height: auto;
     padding: 2rem;
+    align-items: center;
+  }
+
+  .skill-box {
+    width: 90%;
+    height: auto;
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .skill-card h4 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .skill-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    width: 80%;
+  }
+
+  .skill-icons img {
+    max-height: 50px;
+    padding: 5px 5px;
+    /* align-items: center; */
   }
 
   .contact form {
@@ -734,7 +779,7 @@ span {
   .contact form .btn {
     margin-top: 3rem;
     width: 60%;
-    margin: 0 auto;
+    margin: 2 auto;
   }
 }
 
@@ -760,10 +805,33 @@ span {
     margin-left: 5.5rem;
     width: 70%;
   }
+  .skills-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    flex-wrap: wrap; /* Allow skill boxes to wrap onto the next line */
+    gap: 2rem;
+    width: 90%;
+  }
   .skills-container,
   .common-container {
     padding: 0 1%;
     margin-bottom: 0;
+  }
+
+  .skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+    padding: 10px;
+    margin: 0 0;
+  }
+
+  .skill-icons img {
+    max-height: 40px;
+    padding: 5px;
+    position: relative;
   }
 
   .experience {
@@ -784,15 +852,14 @@ span {
   }
 
   .home-content p,
-  .common-card  li,
-  .project-links a,
+  .common-card li p,
   .about-content p,
-  .skill-card p  {
+  .skill-card p {
     font-size: 1.5rem;
   }
 
-  .common-container .common-card h3,
-  .skill-card h4  {
+  .common-container .common-card h4,
+  .skill-card h4 {
     font-size: 2rem;
   }
 
@@ -804,4 +871,3 @@ span {
     margin-bottom: 5rem;
   }
 }
-
