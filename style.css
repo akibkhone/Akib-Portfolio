@@ -862,6 +862,14 @@ span {
 		height: 60vh;
 	}
 
+	.card__title{
+	  font-size: 1.5rem;
+	}
+	
+	.card__descr{
+	  font-size: 1.2rem;
+	}
+
 	.home-content p,
 	.experience-card p,
 	.about-content p {
