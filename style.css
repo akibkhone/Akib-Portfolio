@@ -824,12 +824,8 @@ span {
 	}
 	.about-content {
 		justify-content: center;
-		/* background-color: blue; */
 	}
 
-	.about-img {
-		/* background-color: green; */
-	}
 	.about-img img {
 		align-items: center;
 		width: 100%;
@@ -847,7 +843,7 @@ span {
 	}
 
 	.skill-icons img {
-		padding: 5px;
+		padding: 10px;
 		position: relative;
 	}
 
@@ -862,8 +858,7 @@ span {
 	}
 
 	.projects {
-		max-height: 70vh;
-		padding-left: 4rem;
+		height: 60vh;
 	}
 
 	.home-content p,
