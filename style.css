@@ -280,7 +280,7 @@ span {
 
 .btn {
 	margin: 3rem;
-	border: 0.10em solid var(--green-color-dark);
+	border: 0.1em solid var(--green-color-dark);
 	padding: 1em 3em;
 	color: var(--green-color-dark);
 	font-size: 15px;
@@ -290,7 +290,7 @@ span {
 	outline: none;
 	box-shadow: 0 0 1em 0.25em var(--green-color-dark), 0 0 4em 1em var(--green-color-medium),
 		inset 0 0 0.75em 0.25em var(--green-color-dark);
-	
+
 	position: relative;
 	transition: all 0.3s;
 }
@@ -310,7 +310,7 @@ span {
 }
 
 .btn:hover {
-	color: var(--btn-color);
+	color: var(--bg-color);
 	background-color: var(--green-color-dark);
 	box-shadow: 0 0 1em 0.25em var(--green-color-dark), 0 0 4em 2em var(--green-color-medium),
 		inset 0 0 0.75em 0.25em var(--green-color-dark);
@@ -862,12 +862,12 @@ span {
 		height: 60vh;
 	}
 
-	.card__title{
-	  font-size: 1.5rem;
+	.card__title {
+		font-size: 1.5rem;
 	}
-	
-	.card__descr{
-	  font-size: 1.2rem;
+
+	.card__descr {
+		font-size: 1.2rem;
 	}
 
 	.home-content p,

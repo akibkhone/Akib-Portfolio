@@ -60,7 +60,7 @@ function addProject() {
 			image: '/Images/Gemini.jpeg',
 			description:
 				"Introducing a meticulously crafted React JS Gemini clone, faithfully replicating the renowned platform's design and functionality. Seamlessly responsive across all screen sizes, this project showcases the power of Google's Gemini AI API for dynamic text generation. Experience the full potential of a powerful language model in this faithful recreation.",
-			link: 'https://gemini-ai-clone.onrender.com',
+			link: 'https://gemini-ai-clone.pages.dev/',
 			source: 'https://github.com/akibkhone/Gemini-Ai-Clone',
 		},
 		{
@@ -68,7 +68,7 @@ function addProject() {
 			image: '/Images/Sundown.png',
 			description:
 				"Explore this clone of Sundown Studio, replicating its design and functionality. Built with HTML, CSS, and JavaScript, this project demonstrates your ability to recreate a sleek and responsive website. Discover the work, services, and about sections, echoing the original site's simplicity and elegance.",
-			link: 'https://sundown-studio-clone.onrender.com',
+			link: 'https://sundown-studio-clone.pages.dev/',
 			source: 'https://github.com/akibkhone/Sundown-Studio-Clone',
 		},
 		{
@@ -84,7 +84,7 @@ function addProject() {
 			image: '/Images/Music.jpg',
 			description:
 				'Crafted a responsive music player using HTML, CSS, and JavaScript, offering users a seamless audio exploration experience. Designed with a minimalist interface, the player adapts gracefully across different screen sizes, showcasing adeptness in front-end development.',
-			link: 'https://simple-music-player.onrender.com/',
+			link: 'https://simple-music-player.pages.dev/',
 			source: 'https://github.com/akibkhone/Simple-Music-Player',
 		},
 		{
@@ -100,7 +100,7 @@ function addProject() {
 			image: '/Images/Agency.jpeg',
 			description:
 				'Created a responsive landing page for a fashion agency using HTML and CSS. The layout and design were optimized for various screen sizes to ensure a seamless user experience.',
-			link: 'https://fashion-agency-landing-page.onrender.com',
+			link: 'https://fashion-agency-landing-page.pages.dev/',
 			source: 'https://github.com/akibkhone/Fashion-Agency-Landing-Page',
 		},
 	];
